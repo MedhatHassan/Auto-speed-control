@@ -45,7 +45,7 @@ Connect the Nano Arduino to the 5v output & the GND of the H-bridge.
 
 ## Functions:
 
-## define variables:
+### define variables:
 LCD (I2C address: 0x27, 16x2): Connected to pins SDA and SCL
 IR Sensor Digital Output: D2
 Interrupt for RPM Counting: D2
