@@ -43,9 +43,9 @@ Attach an interrupt (INT0) to D2 to count the holes.
 Connect the 3x3.7V batteries (+) to the 12v input in the H-bridge to power the motors and the (-) to the GND.
 Connect the Nano Arduino to the 5v output & the GND of the H-bridge.
 
+## Functions:
 
-## code:
-
+## define variables:
 LCD (I2C address: 0x27, 16x2): Connected to pins SDA and SCL
 IR Sensor Digital Output: D2
 Interrupt for RPM Counting: D2
@@ -55,9 +55,9 @@ Integral Gain (Ki): 0.1
 Derivative Gain (Kd): 0.2
 Setpoint: 240 RPM
 
-## Functions:
 ### setup():
 Initializes the LCD and sets up pins and interrupts.
+Initializes input and output pins.
 
 ### loop():
 Calls CALC_RPM to calculate RPM.
