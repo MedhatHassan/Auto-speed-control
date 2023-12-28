@@ -2,7 +2,7 @@
 
 ## Requirments
 - Nano ardino
-- H-bridge LM
+- H-bridge L298
 - IR photoelectric encoder sensor
 - 2x16 LCD with I2c
 - Car kit
@@ -27,7 +27,7 @@ Connect the digital output of the IR sensor to D2 on the Nano Arduino.
 Connect the SDA pin of the LCD to A4 on the Nano Arduino.
 Connect the SCL pin of the LCD to A5 on the Nano Arduino.
 
-### H-Bridge (LM) Motor Control:
+### H-Bridge (L298) Motor Control:
 Motor A:
 Connect ENA (PWM) to D10 on the Nano Arduino.
 Connect IN1 to D6 and IN2 to D4 on the Nano Arduino.
