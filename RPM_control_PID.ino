@@ -89,7 +89,7 @@ void moveMotors(double output){
     // Lift Motors
     digitalWrite(IN4, HIGH);
     digitalWrite(IN3, LOW);
-    analogWrite(ENA, output); // Adjust the PWM value for speed control
+    analogWrite(ENA, output); // Adjusting the PWM value for speed control
   } else {
     // Right Motors
     digitalWrite(IN1, LOW);
@@ -97,19 +97,19 @@ void moveMotors(double output){
     // Lift Motors
     digitalWrite(IN4, LOW);
     digitalWrite(IN3, HIGH);
-    analogWrite(ENA, output); // Adjust the PWM value for speed control
+    analogWrite(ENA, output); // Adjusting the PWM value for speed control
   }
 }
 
 void CALC_RPM(){
   detachInterrupt(digitalPinToInterrupt(DIGITAL_OUT));
-  laps = (float(holes) / 20);
+  laps = (float(holes) / 20); //Number of holes in the disk
   RPM = laps * 60;
   // accumulate the distance traveled based on the detected laps.
-  // 2 * π * radius (radius 6)
+  // 2 * π * radius (radius of the car wheel = 6cm)
   comp = comp + PI * 6 * laps;
-  print_to_LCD();
-  holes = 0;
+  print_to_LCD(); //update the values of the RPM on the screen 
+  holes = 0;//initiate the number of holes
   attachInterrupt(digitalPinToInterrupt(DIGITAL_OUT), count, RISING);
 }
 void count() {
