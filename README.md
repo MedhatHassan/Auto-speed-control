@@ -12,13 +12,16 @@
   
 ## Project Description:
 The Arduino code is designed to implement an automatic speed control system for a car using a Proportional-Integral-Derivative (PID) controller. The PID controller helps maintain a constant speed based on the desired RPM setpoint.
-
 The code uses an IR photoelectric encoder sensor to detect the rotations per minute (RPM) of the car's wheels. The PID algorithm calculates the appropriate motor control output to adjust the car's speed and maintain the desired setpoint.
-Components and Pin Configuration:
-Motor A:
 
-## Connections:
-Connect the components to the Nano Arduino following these instructions:
+# Performance:
+1. error with H-bridge and PWM control to obtain 240 RPM was more than **20%**
+   ![with out PID](performance%20graphs/Speed%20values%20without%20PID.png)
+2. error after using try and error method to design PID values **8%**
+    ![with PID1](performance%20graphs/Speed%20control%20with%20PID%20(Kp%3D2%20%2C%20Ki%3D0.1%2C%20Kd%3D0.2).png)
+
+# Connections:
+Connect the components to the **Nano Arduino** following these instructions:
 
 ### IR Photoelectric Encoder Sensor:
 Connect the digital output of the IR sensor to D2 on the Nano Arduino.
