@@ -1,15 +1,17 @@
 Design & Simulation for Auto Speed Control
 This section details the design and simulation process for the Auto Speed Control system. Each step is explained, including the tools, methods, data, and results used during the simulation phase.
 
-### Table of Contents
-1. Design Approach
-2. Simulation Setup
-3. Steps and Methodology
-  - Step 1: System Requirements
-  - Step 2: Modeling
-  - Step 3: Testing and Results
-4. Root Locus and Transfer Function
-5. Conclusion
+### Table of Contents  
+1. [Design Approach](#design-approach)  
+2. [Simulation Setup](#simulation-setup)  
+3. [Steps and Methodology](#steps-and-methodology)  
+   - [Step 1: System Requirements](#step-1-system-requirements)  
+   - [Step 2: Modeling](#step-2-modeling)  
+   - [Step 3: Simulation](#step-3-simulation)  
+4. [Root Locus and Transfer Function](#root-locus-and-transfer-function)  
+   - [Root Locus](#root-locus)  
+   - [Transfer Function](#transfer-function)  
+5. [Conclusion](#conclusion)  
 
 ## Design Approach
 - Software Tools: MATLAB/Simulink was used for system modeling and simulation.
@@ -23,6 +25,7 @@ This section details the design and simulation process for the Auto Speed Contro
   - Straight road with varying speed limits
   - Triggering speed adjustments
 
+## Steps and Methodology
 ### Step 1: System Requirements
 The system was designed with the following requirements:
 
@@ -46,14 +49,14 @@ The system was modeled as a control system using the following components:
 ![Modeling](step%20responce.jpg "click for full view")
 _Note: tested on step response input to simulate car acceleration_
 
-### Root Locus and Transfer Function
-#### Root Locus
+## Root Locus and Transfer Function
+### Root Locus
 The Root Locus plot illustrates the stability and dynamic behavior of the control system. 
 This is a **crucial step** in ensuring that the system response is stable **under varying conditions**.
 ![Modeling](root%20locus.jpg "click for full view")
-#### Transfer Function
+### Transfer Function
 The system's Transfer Function (TF) was derived to describe the relationship between the input (desired speed) and output (actual speed). The transfer function was key in designing the PID controller and analyzing the **system's dynamic response**.
 ![Modeling](tf.jpg "click for full view")
 
-### Conclusion
+## Conclusion
 The design and simulation phase validated the Auto Speed Control system under various conditions, demonstrating smooth speed transitions and effective real-time response. The root locus analysis and transfer function further ensured the system's stability and readiness for hardware integration.
